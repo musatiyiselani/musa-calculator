@@ -23,7 +23,7 @@ body {
 
 .container {
   background-color: rgb(41, 41, 206);
-  height: 90%;
+  padding: 0.25rem;
   max-width: 60rem;
   width: 100%;
   border: 0.15rem solid black;
@@ -45,7 +45,6 @@ body {
 
 .nums {
   background-color: rgb(40, 40, 205);
-  height: 57.5%;
   width: 85%;
   margin: 2rem;
   display: flex;
@@ -91,27 +90,3 @@ body {
 
 
 
-@media (min-width: 769px) {
-  /* Desktop styles */
-  #name {
-    font-size: 3rem;
-    font-weight: bold;
-    padding: 5%;
-  }
-
-  .container {
-    background-color: rgb(41, 41, 206);
-    height: 100%;
-    max-width: 30rem;
-  }
-
-  .part,
-  #zero {
-    font-size: 2rem;
-  }
-
-  
-  #screen {
-    margin-bottom: 1%;
-  }
-}
