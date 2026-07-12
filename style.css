@@ -35,13 +35,14 @@ body {
   padding: 10%;
   width: 65%;
   height: 10%;
+  margin-bottom: 2.5%;
   border: 0.15rem solid black;
   border-radius: 0.25rem;
 }
 
 .nums {
   background-color: rgb(40, 40, 205);
-  height: 90%;
+  height: 70%;
   width: 85%;
   margin: 2rem;
   display: flex;
