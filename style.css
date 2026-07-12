@@ -4,7 +4,7 @@ body {
 }
 
 body {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Times New Roman', Times, serif;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -12,15 +12,14 @@ body {
 }
 
 #name {
-  font-size: 4rem;
-  font-style: oblique;
+  font-size: 5rem;
   font-weight: bold;
-  padding: 5%;
+  padding: 7.5%;
 }
 
 .container {
   background-color: rgb(41, 41, 206);
-  height: 100%;
+  height: 90%;
   max-width: 60rem;
   width: 100%;
   border: 0.15rem solid black;
@@ -35,14 +34,14 @@ body {
   padding: 10%;
   width: 65%;
   height: 10%;
-  margin-bottom: 2.5%;
+  margin-bottom: 5%;
   border: 0.15rem solid black;
   border-radius: 0.25rem;
 }
 
 .nums {
   background-color: rgb(40, 40, 205);
-  height: 70%;
+  height: 57.5%;
   width: 85%;
   margin: 2rem;
   display: flex;
@@ -56,12 +55,12 @@ body {
   display: flex;
   align-items: center;
   border: 0.15rem solid rgb(43, 43, 224);
-  width: 100%;
-  height: 100%;
+  width: 97.5%;
+  height: 70%;
 }
 
 .part {
-  height: 100%;
+  height: 95%;
   width: 25%;
   font-size: 3rem;
   border: 0.1rem solid rgb(13, 13, 139);
@@ -72,13 +71,15 @@ body {
 }
 
 #zero {
-  height: 100%;
+  height: 95%;
   width: 50%;
+  padding: 2rem;
   font-size: 3rem;
   border: 0.1rem solid rgb(13, 13, 139);
   border-radius: 0.5rem;
   background-color: rgb(43, 43, 224);
   margin: 0.1rem;
+  margin-right: 0.5rem;
   color: #ffffff;
 }
 
