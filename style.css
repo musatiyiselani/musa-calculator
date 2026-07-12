@@ -1,0 +1,76 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #ffffff;
+}
+
+#name {
+  font-size: 1.5rem;
+  font-style: oblique;
+  font-weight: bold;
+  padding: 3%;
+}
+
+.container {
+  background-color: rgb(41, 41, 206);
+  height: 40rem;
+  width: 25rem;
+  border: 0.15rem solid black;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#screen {
+  background-color: rgb(93, 93, 93);
+  padding: 10%;
+  width: 65%;
+  border: 0.15rem solid black;
+  border-radius: 0.25rem;
+}
+
+.nums {
+  background-color: rgb(40, 40, 205);
+  height: 90%;
+  width: 85%;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 0.15rem solid rgb(13, 13, 139);
+  border-radius: 0.5rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  border: 0.15rem solid rgb(43, 43, 224);
+  width: 100%;
+  height: 100%;
+}
+
+.part {
+  height: 100%;
+  width: 25%;
+  font-size: 1rem;
+  border: 0.1rem solid rgb(13, 13, 139);
+  border-radius: 0.25rem;
+  background-color: rgb(43, 43, 224);
+  margin: 0.1rem;
+  color: #ffffff;
+}
+
+#zero {
+  height: 100%;
+  width: 50%;
+  font-size: 1rem;
+  border: 0.1rem solid rgb(13, 13, 139);
+  border-radius: 0.5rem;
+  background-color: rgb(43, 43, 224);
+  margin: 0.1rem;
+  color: #ffffff;
+}
+
