@@ -34,6 +34,7 @@ body {
   background-color: rgb(93, 93, 93);
   padding: 10%;
   width: 65%;
+  height: 10%;
   border: 0.15rem solid black;
   border-radius: 0.25rem;
 }
