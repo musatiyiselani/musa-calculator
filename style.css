@@ -3,6 +3,10 @@ body {
   height: 100%;
 }
 
+
+/* Phone styles */
+
+
 body {
   font-family: 'Times New Roman', Times, serif;
   display: flex;
@@ -83,3 +87,31 @@ body {
   color: #ffffff;
 }
 
+
+
+
+
+@media (min-width: 769px) {
+  /* Desktop styles */
+  #name {
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 5%;
+  }
+
+  .container {
+    background-color: rgb(41, 41, 206);
+    height: 100%;
+    max-width: 30rem;
+  }
+
+  .part,
+  #zero {
+    font-size: 2rem;
+  }
+
+  
+  #screen {
+    margin-bottom: 1%;
+  }
+}
