@@ -33,6 +33,7 @@ body {
   align-items: center;
 }
 
+
 #screen {
   background-color: rgb(93, 93, 93);
   padding: 10%;
@@ -88,7 +89,25 @@ body {
 }
 
 
+@media (min-width: 768px) {
 
+  .container {
+    width: 500px;     
+    height: auto;      
+    padding: 1rem;
+  }
+
+  #name {
+    font-size: 2.5rem;
+    padding: 1rem;
+  }
+
+
+  .part,
+  #zero {
+    font-size: 1.5rem;
+  }
+}
 
 
   
