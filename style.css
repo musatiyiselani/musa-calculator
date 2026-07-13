@@ -50,7 +50,7 @@ body {
   height: 60%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0.025rem;
+  gap: 1.25rem;
 }
 
 #zero {
@@ -58,11 +58,11 @@ body {
 }
 
 .part {
-  border-radius: 10%;
+  border-radius: 20%;
   border-color: rgb(40, 40, 205);
   color: #ffffff;
   background-color: rgb(40, 40, 205);
-  font-size: 30px;
+  font-size: 35px;
   font-weight: bold;
 }
 
