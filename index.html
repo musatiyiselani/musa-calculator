@@ -16,24 +16,31 @@
      
     <div class="buttons">
 
-      <button onclick="clearDisplay()" class="part" id="AC-Btn"">AC</button>
-      <button onclick="deleteBtn()" class="part" id="Del-Btn">Del</button>
-      <button class="part" style="color: red;">%</button>
-      <button onclick="appendToDisplay('÷')" class="part">÷</button>
+      <button class="part1">%</button>
+      <button class="part1">√⬚</button>
+      <button class="part1">
+        x<sup>⬚</sup>
+      </button>
+      <button onclick="appendToDisplay('(')" class="part">(</button>
+      <button onclick="appendToDisplay(')')" class="part">)</button>
       <button onclick="appendToDisplay('7')" class="part">7</button>
       <button onclick="appendToDisplay('8')" class="part">8</button>
       <button onclick="appendToDisplay('9')" class="part">9</button>
-      <button onclick="appendToDisplay('×')" class="part">×</button>
+      <button onclick="deleteBtn()" class="part" id="Del-Btn">Del</button>
+      <button onclick="clearDisplay()" class="part" id="AC-Btn">AC</button>
       <button onclick="appendToDisplay('4')" class="part">4</button>
       <button onclick="appendToDisplay('5')" class="part">5</button>
       <button onclick="appendToDisplay('6')" class="part">6</button>
-      <button onclick="appendToDisplay('-')" class="part">-</button>
+      <button onclick="appendToDisplay('×')" class="part">×</button>
+      <button onclick="appendToDisplay('÷')" class="part">÷</button>
       <button onclick="appendToDisplay('1')" class="part">1</button>
       <button onclick="appendToDisplay('2')" class="part">2</button>
       <button onclick="appendToDisplay('3')" class="part">3</button>
       <button onclick="appendToDisplay('+')" class="part">+</button>
+      <button onclick="appendToDisplay('-')" class="part">-</button>
       <button onclick="appendToDisplay('0')" class="part" id="zero">0</button>
       <button onclick="appendToDisplay('.')" class="part">.</button>
+      <button class="part1">Ans</button>
       <button onclick="calculate()" class="part">=</button>
 
     </div>

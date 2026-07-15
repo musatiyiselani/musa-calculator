@@ -35,7 +35,7 @@ body {
 
 
 #display {
-  width: 77.5%; /* 85% */
+  width: 78%; /* 85% */
   height: 15%;
   border: 5px solid rgb(235, 237.5, 240);
   border-radius: 7.5px;
@@ -50,10 +50,11 @@ body {
 .buttons {
   /*border: 5px solid green;*/
   background-color: rgb(245, 245, 245);
-  width: 85%;
-  height: 60%;
+  width: 82.5%;
+  height: 55%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 17.5%);
   gap: 0.5rem;  /* 1.25rem, 0.5rem */
 }
 
@@ -67,6 +68,7 @@ body {
   border-radius: 5%;
 }
 
+.part1,
 .part {
   border-radius: 10%;
   border-color: rgb(140, 140, 140);
@@ -76,6 +78,7 @@ body {
   font-weight: bold;
 }
 
+.part1:hover,
 .part:hover {
   background-color: rgb(155, 160, 165);
 }
@@ -85,6 +88,7 @@ body {
   background-color: rgb(30, 170, 170);
 }
 
+.part1:active,
 .part:active {
   background-color: rgb(165, 170, 175);
 }
@@ -94,3 +98,6 @@ body {
   background-color: rgb(50, 190, 190);
 }
 
+.part1 {
+  color: red;
+}
