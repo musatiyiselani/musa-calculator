@@ -1,8 +1,9 @@
 /* Phone styles */
-
+@import url('https://googleapis.com');
 
 body {
-  font-family: 'Times New Roman', Times, serif;
+  /*font-family: 'Times New Roman', Times, serif;*/
+  font-family: 'Roboto', sans-serif;
   color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -15,37 +16,39 @@ body {
 .calculator {
   display: flex;
   flex-direction: column;
-  background-color: rgb(41, 41, 206);
+  background-color: rgb(250, 252.5, 255);
   width: 25vw;  /* 1000px, 400px*/ 
   height: 90vh;  /* 1950px, 1500px*/
   justify-content: space-evenly;
   align-items: center;
-  border: 2px solid black;
+  border: 2.25px solid rgb(150, 150, 150);
   border-radius: 20px; /* 50px, 40px*/
 }
 
 #name {
   font-size: 35px; /* 75px, 30px*/
   font-weight: bold;
-  padding: 0.25%;
+  padding: 0%;
+  color: rgb(78, 78, 78);
 }
 
 
 #display {
-  width: 80%; /* 85% */
+  width: 77.5%; /* 85% */
   height: 15%;
-  border: 1.5px solid rgb(0, 0, 0);
-  border-radius: 5px;
-  background-color: rgb(89, 89, 128);
-  font-size: 3rem; /* 7.5rem, 3rem */
-  color: rgb(255, 255, 255);
-  padding-left: 1rem; /* 30px, 20px*/
+  border: 5px solid rgb(235, 237.5, 240);
+  border-radius: 7.5px;
+  background-color: rgb(89, 96, 89);
+  font-size: 2.75rem; /* 7.5rem, 3rem */
+  color: rgb(23, 23, 39);
+  padding-left: 0.5rem; /* 30px, 20px*/
+  padding-right: 0.5rem;
 }
 
 
 .buttons {
   /*border: 5px solid green;*/
-  background-color: rgb(40, 40, 205);
+  background-color: rgb(245, 245, 245);
   width: 85%;
   height: 60%;
   display: grid;
@@ -53,25 +56,40 @@ body {
   gap: 0.5rem;  /* 1.25rem, 0.5rem */
 }
 
+#AC-Btn,
+#Del-Btn {
+  background-color: rgb(20, 150, 150);
+}
+
 #zero {
   grid-column: span 2;
+  border-radius: 5%;
 }
 
 .part {
-  border-radius: 12.5%;
-  border-color: rgb(40, 40, 205);
+  border-radius: 10%;
+  border-color: rgb(140, 140, 140);
   color: #ffffff;
-  background-color: rgb(40, 40, 205);
+  background-color: rgb(140, 145, 150);
   font-size: 22.5px;  /* 70px, 25px */
   font-weight: bold;
 }
 
 .part:hover {
-  background-color: rgb(40, 40, 225);
+  background-color: rgb(155, 160, 165);
+}
+
+#AC-Btn:hover,
+#Del-Btn:hover {
+  background-color: rgb(30, 170, 170);
 }
 
 .part:active {
-  background-color: rgb(40, 40, 245);
+  background-color: rgb(165, 170, 175);
 }
 
+#AC-Btn:active,
+#Del-Btn:active {
+  background-color: rgb(50, 190, 190);
+}
 

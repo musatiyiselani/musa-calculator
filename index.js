@@ -22,15 +22,31 @@ function clearDisplay() {
     display.value = "";
 }
 
-let del = "";
+
 
 function deleteBtn() {
-    for (let i = 0; i < math_op.length - 1; i++) {
+
+    let del = "";
+    let N =  math_op.length - 1;
+
+    for (let i = 0; i < N; i++) {
         del += math_op[i];
     }
+    
     math_op = del;
-    display.value = math_op;
     del = "";
+    display.value = "";
+
+    for (let i = 0; i < math_op.length; i++) {
+        if(math_op[i] === '/'){
+            display.value += '÷';
+        }
+        else if (math_op[i] === '*'){
+            display.value += '×';
+        }
+        else{
+            display.value += math_op[i];
+        }} 
 }
 
 function calculate() {
