@@ -54,7 +54,7 @@ body {
   height: 55%;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 17.5%);
+  grid-template-rows: repeat(5, 1fr);
   gap: 0.5rem;  /* 1.25rem, 0.5rem */
 }
 

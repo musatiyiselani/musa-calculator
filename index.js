@@ -17,6 +17,20 @@ function appendToDisplay(input) {
     }
 }
 
+
+function openBracket(input) {
+    if(math_op.length === 0 || '+*/-('.includes(math_op.at(-1))){
+        math_op += '(';
+        display.value += input;
+    }
+    else {
+        math_op += '*(';
+        display.value += input;
+    }
+}
+
+
+
 function clearDisplay() {
     math_op = "";
     display.value = "";
@@ -26,28 +40,26 @@ function clearDisplay() {
 
 function deleteBtn() {
 
-    let del = "";
-    let N =  math_op.length - 1;
-
-    for (let i = 0; i < N; i++) {
-        del += math_op[i];
+    if(math_op[-1] === '(' && math_op[-2] === '*') {
+        math_op = math_op.slice(0, -2);
+    } else {
+        math_op = math_op.slice(0, -1);
     }
-    
-    math_op = del;
-    del = "";
-    display.value = "";
+    display.value = math_op
+        .replace(/\*/g, '×')
+        .replace(/\//g, '÷');
+        
+    /* let helper = math_op;
+    if(helper[-1] === '(' && helper[-2] === '*') {
+        helper = helper.slice(0, -2);
+        helper += '(';
+        display.value = helper;
+    }
+    helper = "";
+    */
 
-    for (let i = 0; i < math_op.length; i++) {
-        if(math_op[i] === '/'){
-            display.value += '÷';
-        }
-        else if (math_op[i] === '*'){
-            display.value += '×';
-        }
-        else{
-            display.value += math_op[i];
-        }} 
 }
+
 
 function calculate() {
     try {
