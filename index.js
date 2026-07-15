@@ -22,6 +22,17 @@ function clearDisplay() {
     display.value = "";
 }
 
+let del = "";
+
+function deleteBtn() {
+    for (let i = 0; i < math_op.length - 1; i++) {
+        del += math_op[i];
+    }
+    math_op = del;
+    display.value = math_op;
+    del = "";
+}
+
 function calculate() {
     try {
         display.value = eval(math_op);
