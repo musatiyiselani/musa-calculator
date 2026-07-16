@@ -20,7 +20,7 @@ body {
   background-color: rgb(250, 252.5, 255);
   width: 90vw;
   max-width: 400px;  /* 1000px, 400px*/ 
-  height: 92.5vh;  /* 1950px, 1500px*/
+  height: 90vh;  /* 1950px, 1500px*/
   justify-content: start;
   align-items: center;
   border: 2.25px solid rgb(150, 150, 150);
