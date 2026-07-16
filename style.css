@@ -54,7 +54,7 @@ body {
 
 .buttons1 {
   /* border: 5px solid green; /* */
-  background-color: rgb(245, 245, 245);
+  background-color: rgb(250, 252.5, 255);
   width: 82.5%;
   height: 30%;
   display: grid;
@@ -67,7 +67,7 @@ body {
 
 #buttons2 {
   /* border: 5px solid green; /* */
-  background-color: rgb(245, 245, 245);
+  background-color: rgb(250, 252.5, 255);
   width: 82.5%;
   height: 25%;
   display: grid;
