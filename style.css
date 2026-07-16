@@ -62,7 +62,7 @@ body {
   grid-template-rows: repeat(4, 1fr);
   gap: 0.5rem;  /* 1.25rem, 0.5rem */
   margin: 2%;
-  margin-bottom: 5%;
+  margin-bottom: 10%;
 }
 
 #buttons2 {
@@ -99,7 +99,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10%;
   height: max-content;
   font-size: x-large;
 }
