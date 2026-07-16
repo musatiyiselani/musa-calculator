@@ -3,7 +3,11 @@ const display = document.getElementById("display");
 let math_op = "";
 
 function appendToDisplay(input) {
-    if(input === '÷'){
+    if(input != '.' && math_op === '0'){
+        math_op = input;
+        display.value = input;
+    }
+    else if(input === '÷'){
         math_op += '/';
         display.value += input;
     }

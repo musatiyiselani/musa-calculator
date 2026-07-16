@@ -13,16 +13,85 @@
     <div id="name">Ntoto's Calculator</div>
     
     <input id="display" type="text" readonly>
-     
-    <div class="buttons">
 
-      <button class="part1">%</button>
+
+
+    <div id="buttons3">
+
+      <button class="part1" id="shift-Btn">shift</button>
+      <button class="part1" id="alpha-Btn">alpha</button>
+
+
+      <div id="control">
+
+        <div id="control1">
+          <button class="part1"><</button>
+        </div>
+        
+        <div id="control2">
+          <button class="part1">/\</button>
+          <button class="part1">\/</button>
+        </div>
+        
+        <div id="control3">
+          <button class="part1">></button>
+        </div>
+        
+      </div>
+      
+
+      <button class="part1" id="mode-Btn">mode</button>
+      <button class="part1" id="on-Btn">on</button>
+      
+    </div>
+
+    <div id="buttons2">
+
+
+      <button class="part1"></button>
+      <button class="part1"></button>
+      <button class="part1"></button>
+      <button class="part1"></button>
+      <button class="part1"></button>
+      <button class="part1"></button>
+
+      <button class="part1">ᵃ⁄♭</button>
+      <button class="part1"></button>
+      <button class="part1"></button>
+      <button class="part1">log</button>
+      <button class="part1">ln</button>
+      <button class="part1"></button>
+
+
       <button class="part1">√⬚</button>
       <button class="part1">
         x<sup>⬚</sup>
       </button>
-      <button onclick="openBracket('(')" class="part">(</button>
-      <button onclick="appendToDisplay(')')" class="part">)</button>
+      <button class="trig">sin</button>
+      <button class="trig">cos</button>
+      <button class="trig">tan</button>
+      <button class="part1"></button>
+      
+
+
+
+      <button class="part1">π</button>
+      <button class="part1">%</button>
+      <button onclick="openBracket('(')" class="part" id="bracket">(</button>
+      <button onclick="appendToDisplay(')')" class="part" id="bracket">)</button>
+      <button class="part1">
+        x<sup>2</sup>
+      </button>
+      <button class="part1">S⇔D</button>
+
+    </div>
+     
+    <div class="buttons1">
+
+
+      <!-- π -->
+
+      
       <button onclick="appendToDisplay('7')" class="part">7</button>
       <button onclick="appendToDisplay('8')" class="part">8</button>
       <button onclick="appendToDisplay('9')" class="part">9</button>
@@ -40,7 +109,7 @@
       <button onclick="appendToDisplay('-')" class="part">-</button>
       <button onclick="appendToDisplay('0')" class="part" id="zero">0</button>
       <button onclick="appendToDisplay('.')" class="part">.</button>
-      <button class="part1">Ans</button>
+      <button class="part1" id="Ans-Btn">Ans</button>
       <button onclick="calculate()" class="part">=</button>
 
     </div>
