@@ -34,10 +34,11 @@ function appendToDisplay(input) {
     }
     */
 
-    if(input != '.' && math_op === '0'){
+    if((input != '.' && input != '²') && math_op === '0'){
         math_op = input;
         display.value = input;
-    } else {
+    }
+    else {
         math_op += input;
         display.value += input;
     }
