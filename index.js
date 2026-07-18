@@ -8,22 +8,23 @@ let isOn = false;
 
 
 
-on_off_btn.addEventListener('click',
-    function togglePower() {
+on_off_btn.addEventListener('click', togglePower);
+    
+function togglePower() {
 
-        isOn = !isOn;
+    isOn = !isOn;
+    if(isOn) {
+        display.value = '0';
+        math_op = "0"
+        on_off_btn.textContent = 'off';
+    }
+    else {
+        display.value = ''
+        math_op = "";
+        on_off_btn.textContent = 'on';
+    }
 
-        if(isOn) {
-            display.value = '0';
-            math_op = "0"
-            on_off_btn.textContent = 'off';
-        }
-        else {
-            display.value = ''
-            math_op = "";
-            on_off_btn.textContent = 'on';
-        }
-})
+}
 
 
 // Working on the display value
@@ -36,22 +37,19 @@ function appendToDisplay(input) {
        return;
     }
 
-    else{ 
-        if((input != '.' && input != '²') && math_op === '0'){
-            math_op = input;
-            display.value = input;
-        }
-        else {
-            math_op += input;
-            display.value += input;
-        }
-
-        if(math_op === '') {
-            display.value = '0';
-            math_op = "0"
-        }
+    if((input != '.' && input != '²') && math_op === '0'){
+        math_op = input;
+        display.value = input;
     }
-    
+    else {
+        math_op += input;
+        display.value += input;
+    }
+
+    if(math_op === '') {
+        display.value = '0';
+        math_op = "0"
+    }  
 }
 
 // The open bracket
@@ -61,15 +59,18 @@ function openBracket(input) {
     if(isOn === false) {
        return;
     }
-    else{
-        if(math_op.length === 0 || '+*/-('.includes(math_op.at(-1))){
-            math_op += '(';
-            display.value += input;
-        }
-        else {
-            math_op += '*(';
-            display.value += input;
-        }
+    
+    if(math_op === "0") {
+        math_op = '(';
+        display.value = input;
+    }
+    else if(math_op.length === 0 || '+*/-('.includes(math_op.at(-1))){
+        math_op += '(';
+        display.value += input;
+    }
+    else {
+        math_op += '*(';
+        display.value += input;
     }
 }
 
@@ -78,10 +79,9 @@ function openBracket(input) {
 function clearDisplay() {
     if(isOn === false) {
        return;
-    } else{
-        math_op = "0";
-        display.value = "0";
-    }
+    } 
+    math_op = "0";
+    display.value = "0";
 }
 
 // Working on the delete button
@@ -90,23 +90,21 @@ function deleteBtn() {
 
     if(isOn === false) {
        return;
-    } else{
-
-        if(math_op[-1] === '(' && math_op[-2] === '*') {
-            math_op = math_op.slice(0, -2);
-        } else {
-            math_op = math_op.slice(0, -1);
-        }
-        display.value = math_op
-            .replace(/\*/g, '×')
-            .replace(/\//g, '÷');
-
-        if(math_op === '') {
-            display.value = '0';
-            math_op = "0"
-        }
+    } 
+    
+    if(math_op[-1] === '(' && math_op[-2] === '*') {
+        math_op = math_op.slice(0, -2);
+    } else {
+        math_op = math_op.slice(0, -1);
     }
+    display.value = math_op
+        .replace(/\*/g, '×')
+        .replace(/\//g, '÷');
 
+    if(math_op === '') {
+        display.value = '0';
+        math_op = "0"
+    }
 }
 
 
@@ -116,40 +114,41 @@ function calculate() {
 
     if(isOn === false) {
        return;
-    } else {
-
-        try {
-            let result = '';
-            for(let i = 0; i < math_op.length; i++) {
-                if(math_op[i] === '÷'){
-                    result += '/';
-                }
-                else if(math_op[i] === '^'){
-                    result += '**';
-                }
-                else if(math_op[i] === 'π'){
-                    result += Math.PI;
-                }
-                else if(math_op[i] === '²'){
-                    result += '**2';
-                }
-                else if (math_op[i] === '×'){
-                    result += '*';
-                }
-                else{
-                    result += math_op[i];
-                }
+    } 
+    try {
+            
+        let result = '';
+           
+        for(let i = 0; i < math_op.length; i++) {
+                
+            if(math_op[i] === '÷'){         
+                result += '/'; 
             }
+            else if(math_op[i] === '^'){
+                result += '**';
+            }
+            else if(math_op[i] === 'π'){
+                result += Math.PI;
+            }
+            else if(math_op[i] === '²'){
+                result += '**2';
+            }
+            else if (math_op[i] === '×'){
+                result += '*';
+            }
+            else{
+                result += math_op[i];
+            }
+        }
 
-            display.value = eval(result);
-            math_op = display.value;
-            result = "";
-        }
-        catch {
-            display.value = "Error";
-            math_op = "";
-            result = '';
-        }
+        display.value = eval(result);
+        math_op = display.value;
+        result = "";
+    }
+    catch {
+        display.value = "Error";
+        math_op = "";
+        result = '';
     }
 }
 
